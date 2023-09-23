@@ -4,10 +4,22 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(
-    MaterialApp(
+    const MaterialApp(
       home: Scaffold(
         backgroundColor: Color.fromARGB(255, 215, 163, 224),
-        body: Container(
+        body: GradientContainer()
+      ),
+    ),
+  );
+}
+
+class GradientContainer extends StatelessWidget {
+  const GradientContainer({super.key});
+
+  @override
+  Widget build(context) {
+
+    return Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(colors: [
               Colors.white,
@@ -20,15 +32,16 @@ void main() {
           ),
           child: const Center(
             child: Text(
-              "helloo rrrr",
+              "helloo r34",
               style: TextStyle(
                 color: Color.fromARGB(255, 2, 29, 51),
                 fontSize: 25.0,
               ),
             ), 
           ),
-        ),
-      ),
-    ),
-  );
+        );
+    
+  }
+
+
 }
